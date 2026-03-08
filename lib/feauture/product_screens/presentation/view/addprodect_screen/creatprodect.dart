@@ -84,6 +84,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(content: Text('Product added successfully!')),
                 );
+                Navigator.pop(context, true);
               } else if (state is CreateErrorState) {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(content: Text('Failed to add product!')),
